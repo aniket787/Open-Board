@@ -1,7 +1,7 @@
 {
-  "name": "open-board-clone",
+  "name": "open-board",
   "version": "1.0.0",
-  "description": "",
+  "description": "node app",
   "main": "app.js",
   "engines": {
     "node": "14.18.1",
