@@ -1,3 +1,3 @@
 # Open-Board
 
-https://openboard787.herokuapp.com/       -- check for live demo
+https://open-board787.herokuapp.com/       -- check for live demo
