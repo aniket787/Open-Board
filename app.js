@@ -1,20 +1,27 @@
 const express = require('express');
+const cors = require('cors')
 const socket = require('socket.io');
 
 const app = express();
 
 app.use(express.static('public'));
+app.use(cors())
 
 let port = process.env.PORT || 3000;
 let server = app.listen(port, () => {
-<<<<<<< HEAD
-  console.log("listening on port "+ port);
-=======
-  console.log("listening on port" +port);
->>>>>>> 5b6da30bdaa715eda91f4828253270e66072b14d
+
+  console.log("listening on port " + port);
+
+  console.log("listening on port" + port);
+
 });
 
-let io = socket(server);
+const io = socket(server, {
+  cors: {
+    origin: 'https://open-board787.herokuapp.com/',
+  }
+});
+// let io = socket(server);
 
 io.on('connection', (socket) => {
   // console.log('made socket connection!');
